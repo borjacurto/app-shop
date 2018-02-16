@@ -12,7 +12,7 @@
                         @csrf
                         <div class="header header-primary text-center">
                             <h4>Inicio de sesión</h4>
-                            <div class="social-line">
+{{--                             <div class="social-line">
                                 <a href="#pablo" class="btn btn-simple btn-just-icon">
                                     <i class="fa fa-facebook-square"></i>
                                 </a>
@@ -22,7 +22,7 @@
                                 <a href="#pablo" class="btn btn-simple btn-just-icon">
                                     <i class="fa fa-google-plus"></i>
                                 </a>
-                            </div>
+                            </div> --}}
                         </div>
                         <p class="text-divider">Ingresa tus datos</p>
                         <div class="content">
@@ -33,11 +33,6 @@
                                 </span>
 
                                 <input id="email" type="email" placeholder="Email..." class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
-                                @if ($errors->has('email'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
-                                @endif
                             </div>
 
                             <div class="input-group">
@@ -45,11 +40,6 @@
                                     <i class="material-icons">lock_outline</i>
                                 </span>
                                 <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password..." required>
-                                @if ($errors->has('password'))
-                                    <span class="invalid-feedback">
-                                        <strong>{{ $errors->first('password') }}</strong>
-                                    </span>
-                                @endif
                             </div>
 
                             <div class="checkbox">
